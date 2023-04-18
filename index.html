@@ -4,13 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VUE-HELLO</title>
+    <style>
+        h1{
+            cursor: pointer;
+        }
+        .color-black{
+            color: black;
+        }
+        .color-red{
+            color: red;
+        }
+        img, button{
+            display: block;
+        }
+    </style>
 </head>
 <body>
     
-    <div id="app"> {{message}} </div>
+    <div id="app"> 
+        <h1 :class="colorBlack">
+            {{message}}
+        </h1>
+        <button @click="changeColor">clicca per cambiare colore al titolo</button>
+        <button @click="changeImage">{{message2}}</button>
+        <img :src="image" alt="lorempicsum pic">
 
+    </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/vue/vue.js"></script>
 </body>
 </html>
